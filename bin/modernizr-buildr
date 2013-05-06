@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+var childProcess = require('child_process'),
+    binPath = require('phantomjs').path,
+    program = require('commander');
+
+program
+    .version('0.0.1')
+    .usage('[--tests shiv-touch-...]')
+    .option('-t, --tests [tests]', 'supply a dash-separated list of ' +
+        'Modernizr tests to incorporate into the build')
+    .parse(process.argv);
+
+var childArgs = [
+  __dirname + '/../modernizr-buildr.js'
+];
+
+if (typeof program.tests === 'string') {
+    childArgs.push('--tests=' + program.tests);
+}
+
+childProcess.execFile(binPath, childArgs, function (err, stdout, stderr) {
+    console.log(stdout);
+});

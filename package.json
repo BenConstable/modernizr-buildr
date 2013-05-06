@@ -1,0 +1,15 @@
+{
+    "name": "modernizr-buildr",
+    "version": "0.0.1",
+    "description": "Create custom Modernizr builds from the command line",
+    "author": {
+        "name": "Ben Constable",
+        "email": "ben@benconstable.co.uk",
+        "url": "http://www.benconstable.co.uk"
+    },
+    "bin": "./bin/modernizr-buildr",
+    "dependencies": {
+        "phantomjs": ">=1.9.0",
+        "commander": ">=1.1.1"
+    }
+}
