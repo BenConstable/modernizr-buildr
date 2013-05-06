@@ -23,7 +23,7 @@ cd modernizr-buildr
 npm install -g
 ```
 
-### Using without npm
+### Installing without npm
 
 If you've already got PhantomJS installed and you don't want to install it again
 [through npm](https://npmjs.org/package/phantomjs), you can skip `npm install`
@@ -39,15 +39,22 @@ However, this is not recommended, purely for ease of use.
 
 ## Usage
 
-See:
+`modernizr-buildr` accepts a dash-separated list of build options as `--tests`.
+This makes it easy to copy and paste an existing set of options from an existing
+Modernizr build.
+
+The generated script will be passed to STDOUT, so if you'd like to create a file
+then do something like the following:
+
+```
+modernizr-buildr -t history-touch-shiv-mq-cssclasses > modernizr.min.js
+```
+
+Also, see:
 
 ```
 modernizr-buildr -h
 ```
-
-`modernizr-buildr` accepts a dash-separated list of build options as `--tests`.
-This makes it easy to copy and paste an existing set of options from an existing
-Modernizr build.
 
 ## Related
 

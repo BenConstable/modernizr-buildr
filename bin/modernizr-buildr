@@ -8,8 +8,23 @@ program
     .version('0.0.1')
     .usage('[--tests shiv-touch-...]')
     .option('-t, --tests [tests]', 'supply a dash-separated list of ' +
-        'Modernizr tests to incorporate into the build')
-    .parse(process.argv);
+        'Modernizr tests to incorporate into the build');
+
+program.on('--help', function () {
+    console.log('  Examples:');
+    console.log('');
+    console.log('    Output to STDOUT:');
+    console.log('');
+    console.log('    $ modernizr-buildr -t history-touch-shiv-mq-cssclasses');
+    console.log('');
+    console.log('    Create a file:');
+    console.log('');
+    console.log('    $ modernizr-buildr -t history-touch-shiv-mq-cssclasses ' +
+        '> modernizr.min.js');
+    console.log('');
+});
+
+program.parse(process.argv);
 
 var childArgs = [
   __dirname + '/../modernizr-buildr.js'
