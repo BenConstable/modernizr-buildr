@@ -13,7 +13,7 @@ for (var i = 0; i < args.length; i++) {
     }
 }
 
-page.open('http://modernizr.com/download/#-generate' + options, function () {
+page.open('http://modernizr.com/download/#-generate-' + options, function () {
     console.log(page.evaluate(function () {
         return document.getElementById('generatedSource').value;
     }));
