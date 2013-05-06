@@ -1,6 +1,6 @@
 {
     "name": "modernizr-buildr",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Create custom Modernizr builds from the command line",
     "author": {
         "name": "Ben Constable",

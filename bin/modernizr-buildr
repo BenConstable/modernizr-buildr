@@ -5,7 +5,7 @@ var childProcess = require('child_process'),
     program = require('commander');
 
 program
-    .version('0.0.1')
+    .version('0.0.2')
     .usage('[--tests shiv-touch-...]')
     .option('-t, --tests [tests]', 'supply a dash-separated list of ' +
         'Modernizr tests to incorporate into the build');
